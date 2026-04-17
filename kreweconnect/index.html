@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KreweConnect — How the Good Teams Roll | NOIT Group</title>
+    <meta name="description" content="KreweConnect is a modern employee directory built for MSPs. Multi-tenant, secure, powered by Microsoft Entra ID. Built by NO & SE IT Group.">
+    <meta name="theme-color" content="#0A0E17">
+    <meta property="og:title" content="KreweConnect — How the Good Teams Roll">
+    <meta property="og:description" content="A modern employee directory built for the way your team works. Multi-tenant. Secure. Purpose-built for MSPs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kreweconnect.noitgroup.com">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <svg class="nav-fleur" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+                    <path d="M16 2c1.5 3 4 5.5 4 8.5 0 2-1 3.5-2.5 4.5l3.5 2c2.5-1 5-0.5 7 1-2.5 0.5-4.5 2-5.5 4l-2-3.5c0.5 2 0 4.5-1.5 6.5 0-3-1.5-5.5-3-7-1.5 1.5-3 4-3 7-1.5-2-2-4.5-1.5-6.5l-2 3.5c-1-2-3-3.5-5.5-4 2-1.5 4.5-2 7-1l3.5-2C12 14 11 12.5 11 10.5 11 7.5 13.5 5 16 2z" fill="currentColor"/>
+                </svg>
+                <span>KreweConnect</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#screenshots">Preview</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-cta">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+        <div class="hero-gradient" aria-hidden="true"></div>
+        <div class="container hero-content">
+            <div class="hero-fleur" aria-hidden="true">
+                <svg viewBox="0 0 120 140" width="80" height="93">
+                    <path d="M60 8c5 10 15 19 15 30 0 7-3.5 12.5-9 16l12.5 7c9-3.5 18-1.5 25 3.5-9 2-16.5 7-20 14.5l-7-12.5c2 7.5 0 16-5.5 23 0-11-5.5-20-11-25-5.5 5-11 14-11 25-5.5-7-7.5-15.5-5.5-23l-7 12.5c-3.5-7.5-11-12.5-20-14.5 7-5 16-7 25-3.5L49 54c-5.5-3.5-9-9-9-16C40 27 50 18 60 8z" fill="url(#fleurGrad)" opacity="0.15"/>
+                    <defs>
+                        <linearGradient id="fleurGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#D4A843"/>
+                            <stop offset="50%" stop-color="#5B2D8E"/>
+                            <stop offset="100%" stop-color="#1B6B3A"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="hero-title animate-in">
+                <span class="hero-title-krewe">Krewe</span><span class="hero-title-connect">Connect</span>
+            </h1>
+            <p class="hero-tagline animate-in delay-1">How the Good Teams Roll</p>
+            <p class="hero-statement animate-in delay-2">NO &amp; SE IT Group deploys KreweConnect, a modern employee directory built for the way your team works.</p>
+            <a href="#contact" class="btn btn-primary hero-cta animate-in delay-3">Get Started</a>
+        </div>
+        <div class="hero-scroll-hint animate-in delay-3" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Features</span>
+                <h2>Everything Your Directory Should Be</h2>
+                <p class="section-subtitle">Purpose-built for MSPs who manage multiple client environments.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon--purple">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="6" y="6" width="16" height="16" rx="3"/>
+                            <rect x="26" y="6" width="16" height="16" rx="3"/>
+                            <rect x="6" y="26" width="16" height="16" rx="3"/>
+                            <rect x="26" y="26" width="16" height="16" rx="3"/>
+                            <circle cx="14" cy="14" r="3"/>
+                            <circle cx="34" cy="14" r="3"/>
+                            <circle cx="14" cy="34" r="3"/>
+                            <circle cx="34" cy="34" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-Tenant Directory</h3>
+                    <p>One login. Every client. Every employee. Powered by Microsoft GDAP, KreweConnect pulls from Azure AD across all your managed tenants.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon--gold">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="24" cy="10" r="5"/>
+                            <circle cx="12" cy="28" r="4"/>
+                            <circle cx="36" cy="28" r="4"/>
+                            <circle cx="8" cy="42" r="3"/>
+                            <circle cx="20" cy="42" r="3"/>
+                            <circle cx="32" cy="42" r="3"/>
+                            <circle cx="42" cy="42" r="3"/>
+                            <line x1="24" y1="15" x2="12" y2="24"/>
+                            <line x1="24" y1="15" x2="36" y2="24"/>
+                            <line x1="12" y1="32" x2="8" y2="39"/>
+                            <line x1="12" y1="32" x2="20" y2="39"/>
+                            <line x1="36" y1="32" x2="32" y2="39"/>
+                            <line x1="36" y1="32" x2="42" y2="39"/>
+                        </svg>
+                    </div>
+                    <h3>Org Charts</h3>
+                    <p>See the whole picture. Interactive org charts for every client organization, built from live directory data.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon--green">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="8" y="6" width="32" height="36" rx="4"/>
+                            <line x1="16" y1="16" x2="32" y2="16"/>
+                            <line x1="16" y1="24" x2="32" y2="24"/>
+                            <line x1="16" y1="32" x2="26" y2="32"/>
+                            <circle cx="36" cy="36" r="9" fill="#141824" stroke="currentColor"/>
+                            <line x1="36" y1="32" x2="36" y2="40"/>
+                            <line x1="32" y1="36" x2="40" y2="36"/>
+                        </svg>
+                    </div>
+                    <h3>Custom Fields</h3>
+                    <p>Your directory, your way. Add emergency contacts, seat locations, badge numbers — whatever your clients need.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon feature-icon--purple">
+                        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 4L28 12L37 13.5L30.5 19.8L32 29L24 24.8L16 29L17.5 19.8L11 13.5L20 12Z"/>
+                            <rect x="6" y="32" width="36" height="12" rx="3"/>
+                            <circle cx="16" cy="38" r="2"/>
+                            <circle cx="24" cy="38" r="2"/>
+                            <circle cx="32" cy="38" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Secure by Design</h3>
+                    <p>Built on Microsoft Entra ID with zero-trust authentication. Your data stays in your tenant, always.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">How It Works</span>
+                <h2>Up and Running in Three Steps</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 56 56" width="56" height="56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="20" cy="28" r="10"/>
+                            <circle cx="36" cy="28" r="10"/>
+                            <path d="M28 20v16" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3>Connect</h3>
+                    <p>Link your NOIT-managed Microsoft 365 tenants via GDAP</p>
+                </div>
+                <div class="step-connector reveal" aria-hidden="true">
+                    <svg width="60" height="4" viewBox="0 0 60 4">
+                        <line x1="0" y1="2" x2="60" y2="2" stroke="#5B2D8E" stroke-width="2" stroke-dasharray="6 4"/>
+                    </svg>
+                </div>
+                <div class="step reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 56 56" width="56" height="56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M28 8v10"/>
+                            <path d="M28 38v10"/>
+                            <path d="M18 18l-7-7"/>
+                            <path d="M45 45l-7-7"/>
+                            <path d="M8 28h10"/>
+                            <path d="M38 28h10"/>
+                            <circle cx="28" cy="28" r="6"/>
+                        </svg>
+                    </div>
+                    <h3>Sync</h3>
+                    <p>KreweConnect automatically pulls employee data from Azure AD</p>
+                </div>
+                <div class="step-connector reveal" aria-hidden="true">
+                    <svg width="60" height="4" viewBox="0 0 60 4">
+                        <line x1="0" y1="2" x2="60" y2="2" stroke="#D4A843" stroke-width="2" stroke-dasharray="6 4"/>
+                    </svg>
+                </div>
+                <div class="step reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 56 56" width="56" height="56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="8" y="12" width="40" height="32" rx="4"/>
+                            <line x1="8" y1="20" x2="48" y2="20"/>
+                            <circle cx="20" cy="32" r="5"/>
+                            <line x1="28" y1="28" x2="40" y2="28"/>
+                            <line x1="28" y1="34" x2="36" y2="34"/>
+                        </svg>
+                    </div>
+                    <h3>Manage</h3>
+                    <p>Search, browse, and customize your directory from one dashboard</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="section screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Preview</span>
+                <h2>See KreweConnect in Action</h2>
+            </div>
+            <div class="screenshots-grid">
+                <div class="screenshot-mockup reveal">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="browser-bar">kreweconnect.noitgroup.com</div>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#A0AEC0" stroke-width="1.5">
+                            <rect x="6" y="6" width="36" height="36" rx="4"/>
+                            <circle cx="18" cy="18" r="4"/>
+                            <path d="M6 34l10-10 8 8 6-6 12 12"/>
+                        </svg>
+                        <span>Dashboard — Screenshot coming soon</span>
+                    </div>
+                </div>
+                <div class="screenshot-mockup screenshot-mockup--small reveal">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="browser-bar">kreweconnect.noitgroup.com/org-chart</div>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#A0AEC0" stroke-width="1.5">
+                            <rect x="6" y="6" width="36" height="36" rx="4"/>
+                            <circle cx="18" cy="18" r="4"/>
+                            <path d="M6 34l10-10 8 8 6-6 12 12"/>
+                        </svg>
+                        <span>Org Chart — Screenshot coming soon</span>
+                    </div>
+                </div>
+                <div class="screenshot-mockup screenshot-mockup--small reveal">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="browser-bar">kreweconnect.noitgroup.com/directory</div>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#A0AEC0" stroke-width="1.5">
+                            <rect x="6" y="6" width="36" height="36" rx="4"/>
+                            <circle cx="18" cy="18" r="4"/>
+                            <path d="M6 34l10-10 8 8 6-6 12 12"/>
+                        </svg>
+                        <span>Directory View — Screenshot coming soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <span class="section-label">About</span>
+                    <h2>Built by NO &amp; SE IT Group</h2>
+                    <p>We're a managed service provider in Louisiana that believes enterprise-grade tools shouldn't require enterprise budgets. KreweConnect is part of our <strong>Krewe Suite</strong> — purpose-built tools for MSPs and the businesses they serve.</p>
+                    <div class="about-coming-soon">
+                        <div class="coming-soon-badge">Coming Soon</div>
+                        <h3>KreweReview</h3>
+                        <p>Contract lifecycle management that transforms murky agreements into clear, actionable insights.</p>
+                    </div>
+                </div>
+                <div class="about-values reveal">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#D4A843" stroke-width="2" stroke-linecap="round">
+                                <path d="M16 4v24M8 12l8-8 8 8"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Enterprise Grade</h4>
+                            <p>The same security and reliability big companies get — at a price that makes sense.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#1B6B3A" stroke-width="2" stroke-linecap="round">
+                                <path d="M6 16c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10"/>
+                                <path d="M16 10v6l4 4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Always Current</h4>
+                            <p>Live sync from Azure AD means your directory is never out of date.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="#5B2D8E" stroke-width="2" stroke-linecap="round">
+                                <path d="M16 4l12 6v8c0 6-5 11-12 14C9 29 4 24 4 18v-8l12-6z"/>
+                                <path d="M11 16l3 3 7-7"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Zero Trust</h4>
+                            <p>Microsoft Entra ID authentication. No shortcuts. No compromises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="section-header reveal">
+                    <span class="section-label">Get Started</span>
+                    <h2>Ready to Roll with the Krewe?</h2>
+                    <p class="section-subtitle">Fill out the form below and we'll get you set up.</p>
+                </div>
+                <form class="contact-form reveal" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Your full name" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name <span class="required">*</span></label>
+                            <input type="text" id="company" name="company" required placeholder="Your company" autocomplete="organization">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="you@company.com" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="employees">Number of Employees</label>
+                            <select id="employees" name="employees">
+                                <option value="" disabled selected>Select range</option>
+                                <option value="1-25">1–25</option>
+                                <option value="26-50">26–50</option>
+                                <option value="51-100">51–100</option>
+                                <option value="100+">100+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message / Comments</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your needs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Join the Krewe</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M4 10h12M12 4l6 6-6 6"/>
+                        </svg>
+                    </button>
+                </form>
+                <div class="form-success" id="formSuccess" hidden>
+                    <div class="success-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="28" stroke="#1B6B3A" stroke-width="3"/>
+                            <path d="M20 32l8 8 16-16" stroke="#1B6B3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Thanks! We'll be in touch soon.</h3>
+                    <p>A member of the NOIT Group team will reach out to get you rolling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="nav-fleur" viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+                            <path d="M16 2c1.5 3 4 5.5 4 8.5 0 2-1 3.5-2.5 4.5l3.5 2c2.5-1 5-0.5 7 1-2.5 0.5-4.5 2-5.5 4l-2-3.5c0.5 2 0 4.5-1.5 6.5 0-3-1.5-5.5-3-7-1.5 1.5-3 4-3 7-1.5-2-2-4.5-1.5-6.5l-2 3.5c-1-2-3-3.5-5.5-4 2-1.5 4.5-2 7-1l3.5-2C12 14 11 12.5 11 10.5 11 7.5 13.5 5 16 2z" fill="#D4A843"/>
+                        </svg>
+                        <span>KreweConnect</span>
+                    </div>
+                    <p>Part of the <strong>Krewe Suite</strong> by NOIT Group</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#contact">Get Started</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://noitgroup.com" target="_blank" rel="noopener">NOIT Group</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li>
+                            <a href="https://linkedin.com/company/noitgroup" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43c-1.14 0-2.07-.93-2.07-2.07s.93-2.07 2.07-2.07 2.07.93 2.07 2.07-.93 2.07-2.07 2.07zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NO &amp; SE IT Group. All rights reserved.</p>
+                <p>Powered by <a href="https://noitgroup.com" target="_blank" rel="noopener">NOIT Group</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

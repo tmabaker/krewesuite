@@ -1,0 +1,42 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/kreweconnect/*",
+      "/krewereview/*",
+      "/css/*",
+      "/js/*",
+      "*.css",
+      "*.js",
+      "*.png",
+      "*.jpg",
+      "*.svg",
+      "*.ico",
+      "*.woff2"
+    ]
+  },
+  "routes": [
+    {
+      "route": "/kreweconnect",
+      "redirect": "/kreweconnect/",
+      "statusCode": 301
+    },
+    {
+      "route": "/krewereview",
+      "redirect": "/krewereview/",
+      "statusCode": 301
+    }
+  ],
+  "globalHeaders": {
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'"
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".woff2": "font/woff2"
+  }
+}
