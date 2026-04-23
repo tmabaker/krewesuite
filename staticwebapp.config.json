@@ -4,6 +4,7 @@
     "exclude": [
       "/kreweconnect/*",
       "/krewereview/*",
+      "/app/kreweconnect/assets/*",
       "/css/*",
       "/js/*",
       "*.css",
@@ -25,6 +26,15 @@
       "route": "/krewereview",
       "redirect": "/krewereview/",
       "statusCode": 301
+    },
+    {
+      "route": "/app/kreweconnect",
+      "redirect": "/app/kreweconnect/",
+      "statusCode": 301
+    },
+    {
+      "route": "/app/kreweconnect/*",
+      "rewrite": "/app/kreweconnect/index.html"
     }
   ],
   "globalHeaders": {

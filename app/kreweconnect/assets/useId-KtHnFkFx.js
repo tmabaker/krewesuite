@@ -1,0 +1,2 @@
+import{ft as e,ut as t}from"./createPreset-Bll9P0Mu.js";var n=e(t()),r={current:0},i=n.createContext(void 0);function a(){return n.useContext(i)??r}var o=n.createContext(void 0);o.Provider;function s(){return n.useContext(o)||``}function c(e=`fui-`,t){"use no memo";let r=a(),i=s(),o=n.useId;if(o){let r=o(),a=n.useMemo(()=>r.replace(/:/g,``),[r]);return t||`${i}${e}${a}`}return n.useMemo(()=>t||`${i}${e}${++r.current}`,[i,e,t,r])}export{c as t};
+//# sourceMappingURL=useId-KtHnFkFx.js.map
