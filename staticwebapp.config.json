@@ -4,7 +4,7 @@
     "exclude": [
       "/kreweconnect/*",
       "/krewereview/*",
-      "/app/kreweconnect/assets/*",
+      "/app/*",
       "/css/*",
       "/js/*",
       "*.css",
@@ -13,7 +13,10 @@
       "*.jpg",
       "*.svg",
       "*.ico",
-      "*.woff2"
+      "*.woff2",
+      "*.woff",
+      "*.ttf",
+      "*.map"
     ]
   },
   "routes": [
@@ -43,7 +46,7 @@
     "X-XSS-Protection": "1; mode=block",
     "Referrer-Policy": "strict-origin-when-cross-origin",
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
-    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'"
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://login.microsoftonline.com https://*.microsoft.com; frame-ancestors 'none'"
   },
   "mimeTypes": {
     ".json": "application/json",
