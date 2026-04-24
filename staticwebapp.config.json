@@ -1,24 +1,4 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": [
-      "/kreweconnect/*",
-      "/krewereview/*",
-      "/app/*",
-      "/css/*",
-      "/js/*",
-      "*.css",
-      "*.js",
-      "*.png",
-      "*.jpg",
-      "*.svg",
-      "*.ico",
-      "*.woff2",
-      "*.woff",
-      "*.ttf",
-      "*.map"
-    ]
-  },
   "routes": [
     {
       "route": "/kreweconnect",
@@ -34,19 +14,34 @@
       "route": "/app/kreweconnect",
       "redirect": "/app/kreweconnect/",
       "statusCode": 301
-    },
-    {
-      "route": "/app/kreweconnect/*",
-      "rewrite": "/app/kreweconnect/index.html"
     }
   ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/app/kreweconnect/assets/*",
+      "/kreweconnect/*",
+      "/krewereview/*",
+      "/css/*",
+      "/js/*",
+      "*.css",
+      "*.js",
+      "*.png",
+      "*.jpg",
+      "*.svg",
+      "*.ico",
+      "*.woff2",
+      "*.woff",
+      "*.ttf",
+      "*.map"
+    ]
+  },
   "globalHeaders": {
     "X-Frame-Options": "DENY",
     "X-Content-Type-Options": "nosniff",
     "X-XSS-Protection": "1; mode=block",
     "Referrer-Policy": "strict-origin-when-cross-origin",
-    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
-    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://login.microsoftonline.com https://*.microsoft.com; frame-ancestors 'none'"
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
   },
   "mimeTypes": {
     ".json": "application/json",
