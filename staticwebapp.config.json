@@ -17,23 +17,14 @@
     }
   ],
   "navigationFallback": {
-    "rewrite": "/index.html",
+    "rewrite": "/app/kreweconnect/index.html",
     "exclude": [
+      "*.{css,js,png,jpg,svg,ico,woff2,woff,ttf,map,json}",
       "/app/kreweconnect/assets/*",
       "/kreweconnect/*",
       "/krewereview/*",
       "/css/*",
-      "/js/*",
-      "*.css",
-      "*.js",
-      "*.png",
-      "*.jpg",
-      "*.svg",
-      "*.ico",
-      "*.woff2",
-      "*.woff",
-      "*.ttf",
-      "*.map"
+      "/js/*"
     ]
   },
   "globalHeaders": {
