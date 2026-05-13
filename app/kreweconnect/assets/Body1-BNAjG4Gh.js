@@ -1,2 +1,0 @@
-import{rt as e,t,ut as n}from"./createPreset-Bll9P0Mu.js";n();var r=t({useStyles:e({root:{Bahqtrf:`fk6fouc`,Be2twd7:`fkhj508`,Bhrd7zp:`figsok6`,Bg96gwp:`f1i3iumi`}},{d:[`.fk6fouc{font-family:var(--fontFamilyBase);}`,`.fkhj508{font-size:var(--fontSizeBase300);}`,`.figsok6{font-weight:var(--fontWeightRegular);}`,`.f1i3iumi{line-height:var(--lineHeightBase300);}`]}),className:{root:`fui-Body1`}.root,displayName:`Body1`});export{r as t};
-//# sourceMappingURL=Body1-BNAjG4Gh.js.map

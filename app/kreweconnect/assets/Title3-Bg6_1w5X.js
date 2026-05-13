@@ -1,2 +1,0 @@
-import{rt as e,t,ut as n}from"./createPreset-Bll9P0Mu.js";n();var r=t({useStyles:e({root:{Bahqtrf:`fk6fouc`,Be2twd7:`f1x0m3f5`,Bhrd7zp:`fl43uef`,Bg96gwp:`fb86gi6`}},{d:[`.fk6fouc{font-family:var(--fontFamilyBase);}`,`.f1x0m3f5{font-size:var(--fontSizeBase600);}`,`.fl43uef{font-weight:var(--fontWeightSemibold);}`,`.fb86gi6{line-height:var(--lineHeightBase600);}`]}),className:{root:`fui-Title3`}.root,displayName:`Title3`});export{r as t};
-//# sourceMappingURL=Title3-Bg6_1w5X.js.map
