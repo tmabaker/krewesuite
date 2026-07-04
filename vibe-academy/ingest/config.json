@@ -1,0 +1,19 @@
+{
+  "community_slug": "vibe-coding-academy",
+  "community_url": "https://www.skool.com/vibe-coding-academy",
+  "owner": {
+    "name": "Alex Finn",
+    "skool_handle": "alex-finn-9189"
+  },
+  "feed_max_pages": 200,
+  "page_delay_seconds": 1.5,
+  "raw_dir": "../raw",
+  "content_dir": "../content",
+  "industry_keywords": {
+    "legal": ["law firm", "lawyer", "attorney", "legal", "paralegal", "litigation", "case management", "court", "docket", "clio", "practice management"],
+    "construction": ["construction", "contractor", "subcontractor", "job site", "jobsite", "builder", "roofing", "hvac", "plumbing", "electrician", "estimating", "bid", "punch list", "procore", "buildertrend"],
+    "auto-dealership": ["dealership", "auto dealer", "car dealer", "dms", "f&i", "service department", "service advisor", "vehicle inventory", "cdk", "dealertrack", "reynolds", "vin"],
+    "title-company": ["title company", "title insurance", "escrow", "closing", "settlement", "real estate closing", "abstract", "recording", "resware", "softpro", "qualia"],
+    "general": ["msp", "managed service", "small business", "smb", "client", "agency", "consulting", "service business"]
+  }
+}
