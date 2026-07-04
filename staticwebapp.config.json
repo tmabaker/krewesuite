@@ -1,6 +1,10 @@
 {
   "routes": [
     {
+      "route": "/vibe-academy/*",
+      "statusCode": 404
+    },
+    {
       "route": "/kreweconnect",
       "redirect": "/kreweconnect/",
       "statusCode": 301
