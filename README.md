@@ -10,6 +10,10 @@ Purpose-built business tools for MSPs and the businesses they serve. By [NO & SE
 |---------|-------------|--------|
 | **KreweConnect** | Modern employee directory — multi-tenant, secure, powered by Microsoft Entra ID | Live |
 | **KreweReview** | Contract lifecycle management — track, approve, and renew with confidence | New |
+| **KreweCatch** | AI-powered threat analysis for suspicious links, files, domains, and emails | New |
+| **KreweGovernance** | Policy template engine with variable wizard, assembly, and acknowledgment tracking | Coming soon |
+
+The app launcher hub at `/app/` links to every module.
 
 ## Folder Structure
 
@@ -20,6 +24,10 @@ krewesuite/
 ├── js/main.js                  # Suite overview scripts
 ├── staticwebapp.config.json    # Azure Static Web App routing & security headers
 ├── README.md                   # This file
+├── app/
+│   ├── index.html              # App launcher hub (/app/) — links to all modules
+│   └── kreweconnect/           # Built KreweConnect SPA (deployed fresh from the
+│                               #   tmabaker/kreweconnect repo by its SWA workflow)
 ├── kreweconnect/               # KreweConnect landing page
 │   ├── index.html
 │   ├── css/styles.css
