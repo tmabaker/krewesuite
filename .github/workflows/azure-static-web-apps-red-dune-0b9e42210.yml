@@ -1,3 +1,18 @@
+# Deploys the FULL KreweSuite site: landing pages from this repo, PLUS the
+# KreweConnect SPA and its /api Functions backend built from
+# tmabaker/kreweconnect (main).
+#
+# WHY: this SWA (krewesuite / red-dune) hosts three things at once —
+#   /                  landing pages            (this repo)
+#   /app/kreweconnect  KreweConnect SPA         (kreweconnect repo)
+#   /api/*             managed Functions API    (kreweconnect repo, api/)
+# A deploy REPLACES the whole site. The previous version of this workflow
+# deployed only the landing pages with api_location:"" — every landing-page
+# push wiped the API off production (2026-07-11 outage: the techtools
+# Passwords page and KreweConnect backend 500'd after two logo commits).
+# Both this workflow and kreweconnect's now deploy the complete site, so a
+# push to either repo produces a working production.
+
 name: Azure Static Web Apps CI/CD
 
 on:
@@ -6,46 +21,56 @@ on:
       - main
     paths-ignore:
       - ".claude/**"
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
-    paths-ignore:
-      - ".claude/**"
+  workflow_dispatch:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
+      # The SPA + API live in the kreweconnect repo (public).
+      - uses: actions/checkout@v4
         with:
-          submodules: true
-          lfs: false
+          repository: tmabaker/kreweconnect
+          ref: main
+          path: .kreweconnect
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build KreweConnect SPA
+        working-directory: .kreweconnect
+        env:
+          VITE_USE_BACKEND_API: "true"
+          VITE_API_BASE_URL: "/api"
+          VITE_REDIRECT_URI: "https://krewesuite.noitgroup.com/app/kreweconnect/"
+          VITE_GOVERNANCE_API_URL: "https://krewe-governance-api.azurewebsites.net"
+        run: |
+          npm ci
+          npm run build
+
+      - name: Assemble site (landing pages + app)
+        run: |
+          mkdir -p site
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.kreweconnect' \
+            --exclude 'site' \
+            ./ site/
+          mkdir -p site/app/kreweconnect
+          cp -r .kreweconnect/dist/* site/app/kreweconnect/
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_DUNE_0B9E42210 }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
-          skip_app_build: true # Static HTML - no build needed
-          ###### End of Repository/Build Configurations ######
-
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_DUNE_0B9E42210 }}
-          action: "close"
+          app_location: "site"
+          api_location: ".kreweconnect/api"
+          output_location: ""
+          skip_app_build: true
