@@ -6,12 +6,12 @@ Purpose-built business tools for MSPs and the businesses they serve. By [NO & SE
 
 ## Products
 
-| Product | Description | Status |
-|---------|-------------|--------|
-| **KreweConnect** | Modern employee directory — multi-tenant, secure, powered by Microsoft Entra ID | Live |
-| **KreweReview** | Contract lifecycle management — track, approve, and renew with confidence | New |
-| **KreweCatch** | AI-powered threat analysis for suspicious links, files, domains, and emails | New |
-| **KreweGovernance** | Policy template engine with variable wizard, assembly, and acknowledgment tracking | Coming soon |
+| Product | Description | Status | Landing page | App |
+|---------|-------------|--------|--------------|-----|
+| **KreweConnect** | Modern employee directory — multi-tenant, secure, powered by Microsoft Entra ID | Live | `/kreweconnect/` | `/app/kreweconnect/` |
+| **KreweReview** | Contract lifecycle management — track, approve, and renew with confidence | Live | `/krewereview/` | `/app/kreweconnect/contracts` |
+| **KreweCatch** | AI-powered threat analysis for suspicious links, files, domains, and emails | New | `/krewecatch/` | [krewecatch.ai](https://krewecatch.ai) (standalone) |
+| **KreweGovernance** | Policy template engine with variable wizard, assembly, and acknowledgment tracking | Coming soon | `/krewegovernance/` | — |
 
 The app launcher hub at `/app/` links to every module.
 
@@ -32,7 +32,15 @@ krewesuite/
 │   ├── index.html
 │   ├── css/styles.css
 │   └── js/main.js
-└── krewereview/                # KreweReview landing page
+├── krewereview/                # KreweReview landing page
+│   ├── index.html
+│   ├── css/styles.css
+│   └── js/main.js
+├── krewecatch/                 # KreweCatch landing page (app is standalone at krewecatch.ai)
+│   ├── index.html
+│   ├── css/styles.css
+│   └── js/main.js
+└── krewegovernance/            # KreweGovernance landing page (coming soon)
     ├── index.html
     ├── css/styles.css
     └── js/main.js
@@ -44,9 +52,9 @@ krewesuite/
 
 This project is designed for Azure Static Web Apps. The `staticwebapp.config.json` handles:
 
-- **Routing:** `/kreweconnect/*` and `/krewereview/*` serve from their respective directories; root serves the suite overview
+- **Routing:** `/kreweconnect/*`, `/krewereview/*`, `/krewecatch/*`, and `/krewegovernance/*` serve from their respective directories; root serves the suite overview
 - **Security headers:** CSP, X-Frame-Options (DENY), X-Content-Type-Options, XSS Protection, Referrer-Policy, Permissions-Policy
-- **Trailing slash redirects:** `/kreweconnect` → `/kreweconnect/`, `/krewereview` → `/krewereview/`
+- **Trailing slash redirects:** each module path redirects to its trailing-slash form (e.g. `/kreweconnect` → `/kreweconnect/`)
 
 ### Deploy Steps
 

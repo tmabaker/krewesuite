@@ -11,6 +11,16 @@
       "statusCode": 301
     },
     {
+      "route": "/krewecatch",
+      "redirect": "/krewecatch/",
+      "statusCode": 301
+    },
+    {
+      "route": "/krewegovernance",
+      "redirect": "/krewegovernance/",
+      "statusCode": 301
+    },
+    {
       "route": "/app/kreweconnect",
       "redirect": "/app/kreweconnect/",
       "statusCode": 301
@@ -28,6 +38,8 @@
       "/app/kreweconnect/assets/*",
       "/kreweconnect/*",
       "/krewereview/*",
+      "/krewecatch/*",
+      "/krewegovernance/*",
       "/css/*",
       "/js/*"
     ]
