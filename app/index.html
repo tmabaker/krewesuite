@@ -31,29 +31,8 @@
             }
         }
 
-        .product-card--governance::before {
-            background: linear-gradient(90deg, var(--purple), var(--gold));
-        }
-
-        .product-card--governance .product-icon {
-            background: rgba(91, 45, 142, 0.12);
-            color: var(--purple-light);
-        }
-
-        .product-card--catch::before {
-            background: linear-gradient(90deg, var(--gold), var(--green));
-        }
-
-        .product-card--catch .product-icon {
-            background: rgba(212, 168, 67, 0.1);
-            color: var(--gold-light);
-        }
-
-        .product-badge--soon {
-            color: var(--gray);
-            background: rgba(160, 174, 192, 0.12);
-        }
-
+        /* --governance/--catch card variants, --soon badge, and .product-note
+           now live in /css/styles.css (shared with the suite overview page) */
         .product-card--disabled {
             cursor: default;
             opacity: 0.65;
@@ -68,13 +47,6 @@
 
         .product-card--disabled:hover::before {
             opacity: 0;
-        }
-
-        .product-note {
-            display: block;
-            margin-top: 12px;
-            font-size: 0.8rem;
-            color: var(--gray-dim);
         }
 
         .hub-footer {
@@ -194,7 +166,7 @@
                     <h3>KreweGovernance</h3>
                     <p class="product-tagline">Policy, Signed and Sealed</p>
                     <p class="product-desc">Policy template engine with a guided variable wizard, document assembly, and employee acknowledgment tracking.</p>
-                    <span class="product-note">In development — launching with milestone R5.</span>
+                    <span class="product-note">In active development — <a href="/krewegovernance/" style="color: var(--gray);">learn more</a>.</span>
                 </div>
             </div>
         </div>
