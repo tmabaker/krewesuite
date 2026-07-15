@@ -451,6 +451,21 @@ img {
     color: var(--purple-light);
 }
 
+.product-logo {
+    margin-bottom: 24px;
+}
+
+.product-logo img {
+    display: block;
+    height: 84px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: var(--radius);
+    background: #fff;
+    padding: 6px 10px;
+}
+
 .product-badge {
     display: inline-block;
     font-size: 0.7rem;
