@@ -23,21 +23,29 @@ on:
       - ".claude/**"
   workflow_dispatch:
 
+# Least-privilege default token: this workflow only reads the repo and pushes
+# to the SWA via AZURE_STATIC_WEB_APPS_API_TOKEN_* (not the GITHUB_TOKEN).
+permissions:
+  contents: read
+
 jobs:
   build_and_deploy_job:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       # The SPA + API live in the kreweconnect repo (public).
-      - uses: actions/checkout@v4
+      # ref is pinned to a specific commit so a landing-page deploy can't be
+      # silently poisoned by an unreviewed push to kreweconnect main. Advance
+      # this SHA deliberately when you intend to ship a new SPA/API build.
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           repository: tmabaker/kreweconnect
-          ref: main
+          ref: 66782cce8cc77b52336b6c0d63ab7861bdc81811 # kreweconnect main @ 2026-07-17
           path: .kreweconnect
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 20
 
@@ -66,7 +74,7 @@ jobs:
 
       - name: Build And Deploy
         id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
+        uses: Azure/static-web-apps-deploy@1a947af9992250f3bc2e68ad0754c0b0c11566c9 # v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_RED_DUNE_0B9E42210 }}
           action: "upload"

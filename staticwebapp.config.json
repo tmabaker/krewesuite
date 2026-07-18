@@ -45,9 +45,11 @@
     ]
   },
   "globalHeaders": {
+    "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.microsoft.com; font-src 'self' data:; connect-src 'self' https://login.microsoftonline.com https://graph.microsoft.com https://krewe-governance-api.azurewebsites.net; frame-ancestors 'none'; base-uri 'self'",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
     "X-Frame-Options": "DENY",
     "X-Content-Type-Options": "nosniff",
-    "X-XSS-Protection": "1; mode=block",
+    "X-XSS-Protection": "0",
     "Referrer-Policy": "strict-origin-when-cross-origin",
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
     "Access-Control-Allow-Origin": "https://techtools.noitgroup.com",

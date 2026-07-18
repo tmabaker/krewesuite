@@ -1,0 +1,4 @@
+# Built KreweConnect SPA — rebuilt from tmabaker/kreweconnect and repopulated
+# into app/kreweconnect/ on every deploy by the Azure SWA workflow. Not source;
+# do not commit the stale build (it caused deploy drift / stale-asset residue).
+/app/kreweconnect/
