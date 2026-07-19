@@ -1,2 +1,0 @@
-import{J as e,ft as t,ut as n}from"./createPreset-Bll9P0Mu.js";var r=t(n());function i(e,t){let n=r.useRef(void 0),i=r.useCallback((r,i)=>(n.current!==void 0&&t(n.current),n.current=e(r,i),n.current),[t,e]),a=r.useCallback(()=>{n.current!==void 0&&(t(n.current),n.current=void 0)},[t]);return r.useEffect(()=>a,[a]),[i,a]}var a=e=>-1,o=e=>void 0;function s(){let{targetDocument:t}=e(),n=t?.defaultView;return i(n?n.setTimeout:a,n?n.clearTimeout:o)}export{i as n,s as t};
-//# sourceMappingURL=useTimeout-BCM5XI5W.js.map

@@ -1,2 +1,0 @@
-import{ft as e,ut as t}from"./createPreset-Bll9P0Mu.js";var n=e(t()),r=n.createContext(void 0);function i(){return n.useContext(r)}var a=n.forwardRef((e,t)=>n.createElement(r.Provider,{value:t},e.children));a.displayName=`MotionRefForwarder`;var o=e=>n.createElement(r.Provider,{value:void 0},e.children);o.displayName=`MotionRefForwarderReset`;export{o as n,i as r,a as t};
-//# sourceMappingURL=MotionRefForwarder-DoZt-Ii3.js.map
