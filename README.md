@@ -12,6 +12,7 @@ Purpose-built business tools for MSPs and the businesses they serve. By [NO & SE
 | **KreweReview** | Contract lifecycle management — track, approve, and renew with confidence | Live | `/krewereview/` | `/app/kreweconnect/contracts` |
 | **KreweCatch** | AI-powered threat analysis for suspicious links, files, domains, and emails | New | `/krewecatch/` | [krewecatch.ai](https://krewecatch.ai) (standalone) |
 | **KreweWorks** | Employee lifecycle portal: hire, change and terminate, routed between hiring managers, HR and IT | Pilot | `/kreweworks/` | per-client portal (engine: `tmabaker/kreweconnect` `apps/kreweworks`) |
+| **KreweAIM** | AI Mastery: personal, evergreen AI coaching on the tools each company licenses | Pilot | `/kreweaim/` | `/app/kreweconnect/kreweaim` |
 | **KreweGovernance** | Policy template engine with variable wizard, assembly, and acknowledgment tracking | Coming soon | `/krewegovernance/` | — |
 
 The app launcher hub at `/app/` links to every module.
@@ -45,6 +46,10 @@ krewesuite/
 │   ├── index.html
 │   ├── css/styles.css
 │   └── js/main.js
+├── kreweaim/                   # KreweAIM landing page (the app page lives in the KreweConnect SPA)
+│   ├── index.html
+│   ├── css/styles.css
+│   └── js/main.js
 └── krewegovernance/            # KreweGovernance landing page (coming soon)
     ├── index.html
     ├── css/styles.css
@@ -57,7 +62,7 @@ krewesuite/
 
 This project is designed for Azure Static Web Apps. The `staticwebapp.config.json` handles:
 
-- **Routing:** `/kreweconnect/*`, `/krewereview/*`, `/krewecatch/*`, `/krewegovernance/*`, and `/kreweworks/*` serve from their respective directories; root serves the suite overview
+- **Routing:** `/kreweconnect/*`, `/krewereview/*`, `/krewecatch/*`, `/krewegovernance/*`, `/kreweworks/*`, and `/kreweaim/*` serve from their respective directories; root serves the suite overview
 - **Security headers:** CSP, X-Frame-Options (DENY), X-Content-Type-Options, XSS Protection, Referrer-Policy, Permissions-Policy
 - **Trailing slash redirects:** each module path redirects to its trailing-slash form (e.g. `/kreweconnect` → `/kreweconnect/`)
 

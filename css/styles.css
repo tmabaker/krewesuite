@@ -417,6 +417,10 @@ img {
     background: linear-gradient(90deg, var(--green), var(--purple));
 }
 
+.product-card--aim::before {
+    background: linear-gradient(90deg, var(--gold), var(--green));
+}
+
 .product-card:hover {
     background: var(--card-hover);
     border-color: var(--border-hover);
@@ -458,6 +462,11 @@ img {
 .product-card--works .product-icon {
     background: rgba(27, 107, 58, 0.12);
     color: var(--green-light);
+}
+
+.product-card--aim .product-icon {
+    background: rgba(212, 168, 67, 0.12);
+    color: var(--gold);
 }
 
 .product-logo {
