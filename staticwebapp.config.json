@@ -26,6 +26,11 @@
       "statusCode": 301
     },
     {
+      "route": "/kreweaim",
+      "redirect": "/kreweaim/",
+      "statusCode": 301
+    },
+    {
       "route": "/app/kreweconnect",
       "redirect": "/app/kreweconnect/",
       "statusCode": 301
@@ -46,6 +51,7 @@
       "/krewecatch/*",
       "/krewegovernance/*",
       "/kreweworks/*",
+      "/kreweaim/*",
       "/css/*",
       "/js/*"
     ]
