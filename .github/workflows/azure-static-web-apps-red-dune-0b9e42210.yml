@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           repository: tmabaker/kreweconnect
-          ref: e3cde4227d052c290529dec0ba3add8a798dcc98 # kreweconnect main @ 2026-10-26 (KreweAIM page, #67)
+          ref: c6d3a07bc4383dc6b440d33d63718c0fa0735377 # kreweconnect main @ 2026-10-26 (KreweAIM menu first, personal page only, #72)
           path: .kreweconnect
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
