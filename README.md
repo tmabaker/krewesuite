@@ -9,13 +9,13 @@ Purpose-built business tools for MSPs and the businesses they serve. By [NO & SE
 | Product | Description | Status | Landing page | App |
 |---------|-------------|--------|--------------|-----|
 | **KreweConnect** | Modern employee directory — multi-tenant, secure, powered by Microsoft Entra ID | Live | `/kreweconnect/` | `/app/kreweconnect/` |
-| **KreweReview** | Contract lifecycle management — track, approve, and renew with confidence | Live | `/krewereview/` | `/app/kreweconnect/contracts` |
+| **KreweReview** | Contract lifecycle management — track, approve, and renew with confidence | Live | `/krewereview/` | `/app/krewereview` |
 | **KreweCatch** | AI-powered threat analysis for suspicious links, files, domains, and emails | New | `/krewecatch/` | [krewecatch.ai](https://krewecatch.ai) (standalone) |
 | **KreweWorks** | Employee lifecycle portal: hire, change and terminate, routed between hiring managers, HR and IT | Pilot | `/kreweworks/` | per-client portal (engine: `tmabaker/kreweconnect` `apps/kreweworks`) |
-| **KreweAIM** | AI Mastery: personal, evergreen AI coaching on the tools each company licenses | Pilot | `/kreweaim/` | `/app/kreweconnect/kreweaim` |
-| **KreweGovernance** | Policy template engine with variable wizard, assembly, and acknowledgment tracking | Coming soon | `/krewegovernance/` | — |
+| **KreweAIM** | AI Mastery: personal, evergreen AI coaching on the tools each company licenses | Pilot | `/kreweaim/` | `/app/kreweaim` |
+| **KreweGovernance** | Policy template engine with variable wizard, assembly, and acknowledgment tracking | Coming soon | `/krewegovernance/` | `/app/krewegovernance` |
 
-The app launcher hub at `/app/` links to every module.
+The app launcher hub at `/app/` links to every module. Each app has its own address under `/app/`; all of them are served by the one KreweConnect build at `/app/kreweconnect/` through the navigation fallback, and the old `/app/kreweconnect/<app>` addresses redirect to the new ones.
 
 ## Folder Structure
 
