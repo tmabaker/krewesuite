@@ -42,7 +42,7 @@ jobs:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           repository: tmabaker/kreweconnect
-          ref: 06f2ecdf4b8b3e900d2d0738de7c9a4f88c68fe0 # kreweconnect main @ 2026-10-27 (each app at its own address, lesson coach, #74)
+          ref: c04130107ccda22b8209dec458c882521a46b86b # kreweconnect main @ 2026-10-28 (KreweReview build repair, #76; per-app addresses, #74)
           path: .kreweconnect
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
